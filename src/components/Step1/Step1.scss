@@ -1,0 +1,98 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container-step1 {
+  width: 100%;
+  height: 400px;
+  background-color: #cdd3e1;
+  .wrapper-step1 {
+    width: 50%;
+    height: 65rem;
+    margin: auto;
+    border: 1px solid black;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px 5px #999999;
+    .wrapper-top-step1 {
+      margin-top: 2em;
+      display: flex;
+      justify-content: space-around;
+      gap: 40px;
+      .child-step1 {
+        .box-step1 {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background-color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          .fa-droplet {
+            right: 20px;
+            font-size: 2em;
+            color: #2f669e;
+          }
+        }
+        .text-step1 {
+          margin-top: 1em;
+          text-align: center;
+          font-size: 1em;
+          color: #392ce4;
+        }
+      }
+    }
+    .wrapper-bottom-step1 {
+      width: 100%;
+      height: 400px;
+      background-color: #fff;
+
+      .child-botom-step1 {
+        margin: 1em 2em;
+        padding-top: 2em;
+        h2 {
+          color: #000;
+          font-size: 1.2em;
+          font-weight: 400;
+        }
+        .child-step1 {
+          font-size: #000;
+          font-size: 0.8em;
+          padding-top: 1em;
+          span {
+            font-size: 500;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+  .step1-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6em;
+    height: 1.5em;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #2f669e;
+    font-size: 2em;
+    margin-top: 1em;
+    margin-left: 55%;
+    cursor: pointer;
+    .btn-submit {
+      background-color: #2f669e;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+.ant-select-compact-item {
+  width: 29em !important;
+}
+.ant-select-selection-item {
+  width: 30em !important;
+}
+

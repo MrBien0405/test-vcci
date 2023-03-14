@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.step3-information {
+  height: 300px;
+
+  border-radius: 10px;
+  background-color: #fff;   
+  .step3-text-question {
+    padding: 20px 15px;
+    font-size: 1em;
+    font-weight: 400;
+  }
+}
+.submit {
+  display: flex;
+  justify-content: space-around;
+  .back-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8em;
+    height: 2em;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #2f669e;
+    cursor: pointer;
+    button {
+      background-color: #2f669e;
+      color: #fff;
+      border: none;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 1em;
+    }
+  }
+  .next-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8em;
+    height: 2em;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #2f669e;
+    cursor: pointer;
+    button {
+      background-color: #2f669e;
+      color: #fff;
+      border: none;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 1em;
+    }
+  }
+}
+.ant-checkbox-wrapper {
+  margin-inline-start: 0px !important;
+}

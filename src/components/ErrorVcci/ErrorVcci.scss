@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.error-vcci {
+  width: 100%;
+  height: 100vh;
+  background-color: #cdd3e1;
+  .container-error-vcci {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 .successfulvcci-container {
-  width: 100%;
-  background-color: #2e6ce9;
+  width: 200vh;
+  height: 100vh;
+  background-color: #D1D7E3;
   .wrapper-sucessful-vcci {
     position: absolute;
     top: 50%;
@@ -13,9 +14,9 @@
     transform: translate(-50%, -50%);
     width: 600px;
     height: 520px;
-    border: 1px solid #28282d;
     margin: auto;
     background-color: #fff;
+    border-radius: 10px;
     // border-top: 2px solid #ff5772;
 
     .box-img-successfull-vcci {

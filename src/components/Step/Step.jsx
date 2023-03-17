@@ -7,11 +7,11 @@ function Step() {
   const [step1, setStep1] = useState(true);
   const [step2, setStep2] = useState(false);
   const [step3, setStep3] = useState(false);
-  const [headStep1, setHeadStep1] = useState(true);
-  const [headStep2, setHeadStep2] = useState(true);
-  const [headStep3, setHeadStep3] = useState(true);
+  const [color, setColor] = useState(true);
   const [cv, setCv] = useState("");
   const [age1, setAge1] = useState("");
+
+  
   const handleChangecv = (cv) => {
     setCv(cv);
   };
@@ -47,33 +47,36 @@ function Step() {
     setStep3(!step3);
   };
 
-
-
   return (
     <>
       <div className='container-step1'>
         <div className='wrapper-step1'>
           <div className='wrapper-top-step1'>
-            <div className='child-step1'>
-              <div className='box-step1'>
-                <i className='fa-solid fa-droplet'></i>
+            {color && (
+              <div className='child-step1'>
+                <div className='box-step1'>
+                  <i className='fa-solid fa-droplet'></i>
+                </div>
+                <div className='text-step1'>Bước 1</div>
               </div>
-              <div className='text-step1'>Bước 1</div>
-            </div>
+            )}
 
-            <div className='child-step1'>
-              <div className='box-step1'>
-                <i className='fa-solid fa-droplet'></i>
+            {color && (
+              <div className='child-step1'>
+                <div className='box-step1'>
+                  <i className='fa-solid fa-droplet'></i>
+                </div>
+                <div className='text-step1'>Bước 2</div>
               </div>
-              <div className='text-step1'>Bước 2</div>
-            </div>
-
-            <div className='child-step1'>
-              <div className='box-step1'>
-                <i className='fa-solid fa-droplet'></i>
+            )}
+            {color && (
+              <div className='child-step1'>
+                <div className='box-step1'>
+                  <i className='fa-solid fa-droplet'></i>
+                </div>
+                <div className='text-step1'>Bước 3</div>
               </div>
-              <div className='text-step1'>Bước 3</div>
-            </div>
+            )}
           </div>
           {step1 && (
             <Step1
@@ -92,9 +95,9 @@ function Step() {
           )}
           {step3 && (
             <Step3
-            //   onChange={onChange1}
+              //   onChange={onChange1}
               handleSubmitBackStep3={handleSubmitBackStep3}
-            //   handleSubmitNextStep3={handleSubmitNextStep3}
+              //   handleSubmitNextStep3={handleSubmitNextStep3}
             />
           )}
         </div>

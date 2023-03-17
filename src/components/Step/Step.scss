@@ -1,5 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.ant-form-item-row {
+  width: 110%;
+}
+.ant-select-selector {
+  width: 108% !important;
+}
+.ant-select-arrow {
+  margin-right: -2em;
+}
+.ant-form-item-label {
+  white-space: nowrap !important;
 }

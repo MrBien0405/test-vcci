@@ -120,7 +120,7 @@ function Step1(props) {
             </Form.Item>
 
             <Form.Item
-              label='Số điện thoại di động để liên hệ(*)'
+              label='Số điện thoại di động để liênhệ(*)'
               name='phone'
               rules={[
                 {

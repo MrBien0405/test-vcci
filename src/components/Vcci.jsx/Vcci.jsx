@@ -3,11 +3,15 @@ import logo from "../../assets/vcci_logo.2dd1f9f5.jpg";
 import "./Vcci.scss";
 function Vcci() {
   const [inputValue, setInputValue] = useState("");
+  
   const handleChangeInput = (e) => {
     setInputValue(e.target.value);
   };
   const handleClickSubmit = () => {
     const test = "0110010000";
+    if(inputValue ==""){
+      alert("Vui lòng nhập mã số doanh nghiệp")
+    }
     if (inputValue == test) {
       window.location.href = "/step";
     }
@@ -60,8 +64,8 @@ function Vcci() {
                   id=''
                   onChange={handleChangeInput}
                 />
-                <div className='submit-btn'>
-                  <button onClick={handleClickSubmit}>Bắt đầu</button>
+                <div onClick={handleClickSubmit} className='submit-btn'>
+                  <button>Bắt đầu</button>
                 </div>
                 <p className='text-information2'>
                   Chú ý: Do việc đăng ký và xác nhận để tham gia chương trình hỗ

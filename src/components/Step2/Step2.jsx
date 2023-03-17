@@ -12,7 +12,7 @@ function Step1(props) {
         </h2>
         <Checkbox onChange={onChange}>
           Đối soát thủ công bằng cách kiểm tra các giao dịch
-        </Checkbox>
+        </Checkbox><br />
         <Checkbox onChange={onChange}>Đối soát tự động</Checkbox>
       </div>
       <div className='submit'>

@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Checkbox } from "antd";
 import "./Step3.scss";
 
 function Step1(props) {
-  let { handleSubmitBackStep3  } = props;
-const [inputValue, setInputValue] = useState("");
+  let { handleSubmitBackStep3 } = props;
+  const [inputValue, setInputValue] = useState("");
 
   const onChange1 = (e) => {
     console.log(`checked = ${e.target.checked}`);
@@ -13,11 +13,14 @@ const [inputValue, setInputValue] = useState("");
   };
   const handleSubmitNextStep3 = (e) => {
     console.log(inputValue);
+    if ((inputValue == "")) {
+      alert("Vui lòng trả lời câu hỏi");
+    }
     if (inputValue) {
       window.location.href = "/successfull";
     }
   };
-  
+
   return (
     <>
       <div className='step3-information'>
@@ -53,7 +56,6 @@ const [inputValue, setInputValue] = useState("");
           <button>Next</button>
         </div>
       </div>
-
     </>
   );
 }

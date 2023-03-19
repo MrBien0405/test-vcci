@@ -10,8 +10,13 @@ function Step() {
   const [color, setColor] = useState(true);
   const [cv, setCv] = useState("");
   const [age1, setAge1] = useState("");
+  const [styleBackgroundB1, setStyleBackgroundB1] = useState(false);
+  const [styleColorB1, setStyleColorB1] = useState(false);
+  const [styleBackgroundB2, setStyleBackgroundB2] = useState(false);
+  const [styleColorB2, setStyleColorB2] = useState(false);
+  const [styleBackgroundB3, setStyleBackgroundB3] = useState(false);
+  const [styleColorB3, setStyleColorB3] = useState(false);
 
-  
   const handleChangecv = (cv) => {
     setCv(cv);
   };
@@ -24,6 +29,11 @@ function Step() {
     if (data) {
       setStep2(!step2);
       setStep1(!step1);
+      setStyleBackgroundB1(!styleBackgroundB1);
+      setStyleColorB1(!styleColorB1);
+      alert(
+        "Đề nghị các Anh/Chị khi thực hiện khảo sát phải xin ý kiến chủ Doanh nghiệp vì các câu hỏi rất quan trọng ảnh hưởng đến sản xuất kinh doanh và tổ Chuyển đổi số VCCI lấy ý kiến của Chủ Doanh nghiệp để phản ánh kiến nghị đến chính phủ."
+      );
     }
   };
   const onFinishFailed = (errorInfo) => {
@@ -35,10 +45,16 @@ function Step() {
   const handleSubmitBack = () => {
     setStep2(!step2);
     setStep1(!step1);
+    setStyleBackgroundB2(styleBackgroundB2);
+    setStyleColorB2(styleColorB2);
   };
   const handleSubmitNext = () => {
     setStep2(!step2);
     setStep3(!step3);
+    setStyleBackgroundB2(!styleBackgroundB2);
+    setStyleColorB2(!styleColorB2);
+    // setStyleBackgroundB1(!styleBackgroundB1);
+    // setStyleColorB1(!styleColorB1);
   };
 
   const handleSubmitBackStep3 = () => {
@@ -52,31 +68,57 @@ function Step() {
       <div className='container-step1'>
         <div className='wrapper-step1'>
           <div className='wrapper-top-step1'>
-            {color && (
-              <div className='child-step1'>
-                <div className='box-step1'>
-                  <i className='fa-solid fa-droplet'></i>
-                </div>
-                <div className='text-step1'>Bước 1</div>
+            <div className='child-step1'>
+              <div
+                className='box-step1'
+                style={{
+                  backgroundColor: styleBackgroundB1 ? "#2f669e" : "#fff",
+                }}
+              >
+                <i
+                  className='fa-solid fa-droplet'
+                  style={{
+                    color: styleColorB1 ? "#fff" : "2f669e",
+                  }}
+                ></i>
               </div>
-            )}
 
-            {color && (
-              <div className='child-step1'>
-                <div className='box-step1'>
-                  <i className='fa-solid fa-droplet'></i>
-                </div>
-                <div className='text-step1'>Bước 2</div>
+              <div className='text-step1'>Bước 1</div>
+            </div>
+
+            <div className='child-step1'>
+              <div
+                className='box-step1'
+                style={{
+                  backgroundColor: styleBackgroundB2 ? "#2f669e" : "#fff",
+                }}
+              >
+                <i
+                  className='fa-solid fa-droplet'
+                  style={{
+                    color: styleColorB2 ? "#fff" : "2f669e",
+                  }}
+                ></i>
               </div>
-            )}
-            {color && (
-              <div className='child-step1'>
-                <div className='box-step1'>
-                  <i className='fa-solid fa-droplet'></i>
-                </div>
-                <div className='text-step1'>Bước 3</div>
+              <div className='text-step1'>Bước 2</div>
+            </div>
+
+            <div className='child-step1'>
+              <div
+                className='box-step1'
+                style={{
+                  backgroundColor: styleBackgroundB3 ? "#2f669e" : "#fff",
+                }}
+              >
+                <i
+                  className='fa-solid fa-droplet'
+                  style={{
+                    color: styleColorB3 ? "#fff" : "2f669e",
+                  }}
+                ></i>
               </div>
-            )}
+              <div className='text-step1'>Bước 3</div>
+            </div>
           </div>
           {step1 && (
             <Step1
@@ -88,6 +130,7 @@ function Step() {
           )}
           {step2 && (
             <Step2
+              style={{ setStyleBackgroundB2, setStyleColorB2 }}
               onChange={onChange}
               handleSubmitBack={handleSubmitBack}
               handleSubmitNext={handleSubmitNext}
